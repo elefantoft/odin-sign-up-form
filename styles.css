@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.text-container {
+    padding: 50px 100px;
+    background-color: whitesmoke;
+
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+}
+
+form {
+    background-color: white;
+    flex: 1;
+    margin: 10px;
+    box-shadow: 0 15px 10px -15px #111;
+}
+
+img {
+    height: 50rem;
+}
+
