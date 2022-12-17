@@ -5,3 +5,6 @@ This project is part of The Odin Project's Intermediate HTML and CSS Course. I w
 Link to the project:
 
 https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form
+
+
+Photo by Tareq Hasan: https://unsplash.com/@ta_req_
