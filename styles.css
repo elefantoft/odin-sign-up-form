@@ -8,6 +8,7 @@
     padding: 0;
     border: 0;
     box-sizing: border-box;
+    outline: none;
 }
 
 body {
@@ -18,7 +19,7 @@ body {
 
 .left-panel {
     position: relative;
-    height: 100vh;
+    color: white;
 }
 
 .left-panel > img {
@@ -26,38 +27,37 @@ body {
 }
 
 .logo {
-    background-color: rgba(0, 0, 0, 0.4);
-    
     display: flex;
     position: absolute;
     justify-content: center;
     align-items: center;
+    gap: 10px;
     
+    background-color: rgba(0, 0, 0, 0.4);
     height: 150px;
     width: 100%;
-
     top: 270px;
-    padding: 30px;
 }
 
 .logo > img {
     width: 5rem;
-    margin-right: 10px;
 }
 
 .logo h1 {
     font-family: norse-bold;
-    color: white;
     font-size: 3rem;
 }
 
 .img-credits{
     position: absolute;
     text-align: center;
-    color: white;
     bottom: 15px;
     font-size: 0.7rem;
     width: 100%;
+}
+
+.img-credits > p > a {
+    color: white;
 }
 
 .right-panel {
@@ -67,12 +67,11 @@ body {
     height: 100vh;
 }
 
-.right-panel > div {
-    flex: 1;
-    padding-left: 50px;
+.text-field, .text-field-2, .form-field {
+    padding: 20px 0 20px 50px;
 }
 
-.text-field, form {
+.text-field, .text-field-2, form {
     width: 80%;
 }
 
@@ -81,17 +80,20 @@ body {
     font-weight: bold;
 }
 
+.text-field > p, .text-field-2 > p {
+    margin-top: 25px;
+}
+
 .form-field {
     appearance: none;
     background-color: white;
-    box-shadow: 0 15px 10px -15px lightgray;
+    margin-top: 50px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .form-row {
     display: flex;
-    margin-right: 30px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 20px 50px 20px 0;  
 }
 
 .form-row > div {
@@ -102,31 +104,45 @@ body {
     margin-right: 50px;
 }
 
+label {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #3d4c4f;
+}
+
 input {
     border: 1px solid #E5E7EB;
     border-radius: 3px;
+    width: 370px;
+    padding: 5px;
+    font-size: 1rem;
 }
 
 button {
     background-color: #3b494c;
     color: white;
     text-align: center;
-    border-radius: 3px;
+    border-radius: 10px;
+    padding: 15px 40px;
+    font-size: 1rem;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
 button:hover {
     background-color: #64706c;
 }
 
-a {
+.text-field-2 > p > a {
     color: #e75555;
+    text-decoration: none;
 }
 
-:invalid {
-    border-color: red;
+input:invalid {
+    border-color:  red;
 }
 
-:focus {
+input:focus {
     border-color: blue;
     box-shadow: 1px;
 }
