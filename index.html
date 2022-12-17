@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <title>Sign-up form</title>
 </head>
 
@@ -34,7 +35,7 @@
         </div>
         
         <div class="form-field">
-            <form action="#" method="post">
+            <form id="sign-up-form">
                 <fieldset>
                     <legend>Let's do this!</legend>
 
@@ -45,7 +46,8 @@
                                 type="text"
                                 id="first_name"
                                 name="first_name"
-                                placeholder="Ola">
+                                placeholder="Ola"
+                                maxlength="40">
                         </div>
                         <div>
                             <label for="last_name">LAST NAME</label>
@@ -53,53 +55,63 @@
                                 type="text"
                                 id="last_name"
                                 name="last_name"
-                                placeholder="Nordmann">
+                                placeholder="Nordmann"
+                                maxlength="40">
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div>
-                            <label for="email">EMAIL</label>
+                            <label for="email">EMAIL *</label>
                             <input
                                 type="email"
                                 id="email"
                                 name="email"
-                                placeholder="Ola@Nordmann.no"
+                                maxlength="40"
                                 required>
+                                <span></span>
                         </div>
                         <div>
                             <label for="phone_number">PHONE NUMBER</label>
                             <input
                                 type="tel"
                                 name="phone_number"
-                                id="phone_number">
+                                id="phone_number"
+                                maxlength="40">
                         </div>
                     </div>
 
                     <div class="form-row">
-                        <div>
-                            <label for="password">PASSWORD</label>
+                        <div class="first-pwd">
+                            <label for="password">PASSWORD *</label>
                             <input
                                 type="password"
                                 name="password"
                                 id="password"
+                                minlength="8"
+                                maxlength="40"
                                 required>
+                                <span class="pwd-error"><span></span></span>
                         </div>
                         <div>
-                            <label for="confirm_pwd">CONFIRM PASSWORD</label>
+                            <label for="confirm-pwd">CONFIRM PASSWORD *</label>
                             <input
                                 type="password"
-                                name="confirm_pwd"
-                                id="confirm_pwd"
+                                name="confirm-pwd"
+                                id="confirm-pwd"
+                                minlength="8"
+                                maxlength="40"
                                 required>
+                                <span></span>
                         </div>
                     </div>
                 </fieldset>
             </form>
         </div>
         <div class="text-field-2">
-            <button>Create Account</button>
-            <p>Already have an account? <a href="login.html">Log in</a></p>
+            <button type="submit" form="sign-up-form">Create Account</button>
+            <span></span>
+            <p>Already have an account? <a a href="">Log in</a></p>
         </div>
 
     </div>

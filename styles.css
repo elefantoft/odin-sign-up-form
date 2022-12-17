@@ -93,7 +93,7 @@ body {
 
 .form-row {
     display: flex;
-    margin: 20px 50px 20px 0;  
+    margin: 25px 50px 25px 0;  
 }
 
 .form-row > div {
@@ -138,12 +138,29 @@ button:hover {
     text-decoration: none;
 }
 
-input:invalid {
-    border-color:  red;
+input + span {
+    position: relative;
+}
+
+.pwd-error > span {
+    color: red;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 0.1rem;
+}
+
+.submitted input:invalid {
+    border-color: red;
 }
 
 input:focus {
     border-color: blue;
-    box-shadow: 1px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+button + span {
+    top: 0.5rem;
+    font-size: 1rem;
+    margin-left: 20px;
 }
 
